@@ -11,4 +11,6 @@ module.exports = {
 // // 	console.log(theString);
 // // }
 
-
+// module.exports = function(aString){
+// 	console.log(aString);
+// }
