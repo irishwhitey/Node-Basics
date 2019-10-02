@@ -1,7 +1,9 @@
 var fs = require('fs');
 
 var kickOff = function(success, reject){
+    console.log('promise kick off is running....');
     fs.readFile('./largefile.data', function(err,data){
+        console.log('read file callback....');
         if (!err){
             success(data);
         }
@@ -10,9 +12,8 @@ var kickOff = function(success, reject){
         }
     });
 };
-
-var promise1 = new Promise(kickOff); 
-promise1
+console.log('here');
+var promise1 = new Promise(kickOff)
     .catch(function(error) {
         console.error("Error " + error);
     })
