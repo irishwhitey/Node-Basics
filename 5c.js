@@ -16,9 +16,10 @@ console.log('here');
 var promise1 = new Promise(kickOff)
     .catch(function(error) {
         console.error("Error " + error);
+        return Promise.reject()
     })
     .then(function(data){
-        console.error("In Then"); 
+        console.error("************In Then**********8"); 
         console.error(data.length); 
     });
     // .then(function(data){

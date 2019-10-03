@@ -50,6 +50,8 @@ var promise = new Promise(function(success,failure){
         success();
     })
 })
+
+
 promise
 .then(function(data){
     console.log('second then ');
